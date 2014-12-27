@@ -1,4 +1,6 @@
-geoip
+Mygento_Geoip
 =====
 
-Sypex Geo for Magento
+Use Sypex Geo DB in Magento
+
+База Sypex Geo - по ходу использования и тестов  - в РФ определяет города лучше аналогичных публичных баз.
