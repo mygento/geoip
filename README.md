@@ -7,6 +7,6 @@ Use Sypex Geo DB in Magento
 
 
 USAGE:
-1. Insert into head.phtml:  <?php Mage::helper('geoip')->init(); ?>
-2. Get current city: <?php echo Mage::helper('geoip')->getCurrentCity(); ?>
-3. You can set current city by sending POST ($postData['city'])) to geoip/ajax/set controller.
+1. Insert into head.phtml:  <?php Mage::helper('geoip')->init(); ?><br/>
+2. Get current city: <?php echo Mage::helper('geoip')->getCurrentCity(); ?><br/>
+3. You can set current city by sending POST ($postData['city'])) to geoip/ajax/set controller.<br/>
