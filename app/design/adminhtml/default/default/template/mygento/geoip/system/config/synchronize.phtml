@@ -17,7 +17,7 @@
             method: 'get',
             frequency: 1,
             loaderArea: false,
-            onSuccess: function(transport) {
+            onSuccess: function (transport) {
                 try {
                     var percent = parseInt(transport.responseText);
                     if (percent == 100) {
@@ -41,7 +41,7 @@
         new Ajax.Request('<?php echo $this->getAjaxSyncUrl() ?>', {
             loaderArea: false,
             asynchronous: true,
-            onSuccess: function(transport) {
+            onSuccess: function (transport) {
                 enableSyncButton();
                 var response = eval('(' + transport.responseText + ')');
                 if (response.status == 'success') {

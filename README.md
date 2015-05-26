@@ -1,5 +1,6 @@
 Mygento_Geoip
 =====
+[![Build Status](https://travis-ci.org/mygento/geoip.svg?branch=master)](https://travis-ci.org/mygento/geoip) [![Code Climate](https://codeclimate.com/github/mygento/geoip/badges/gpa.svg)](https://codeclimate.com/github/mygento/geoip) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mygento/geoip/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mygento/geoip/?branch=master)
 
 Use Sypex Geo DB in Magento
 
