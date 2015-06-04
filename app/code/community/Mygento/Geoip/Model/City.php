@@ -15,26 +15,28 @@ class Mygento_Geoip_Model_City extends Mygento_Geoip_Model_Abstract
     public function __construct()
     {
         parent::__construct();
-
-        $this->city = $this->getCityByIp(Mage::helper('core/http')->getRemoteAddr());
+        if (!Mage::getSingleton('core/session')->getGeoCity()) {
+            $this->city = $this->getCityByIp(Mage::helper('core/http')->getRemoteAddr());
+            Mage::getSingleton('core/session')->setGeoCity($this->city);
+        }
     }
 
     public function getCityByIp($ip)
     {
-        #$this->local_file
-        include_once Mage::getBaseDir('lib') . DS . 'geoip' . DS . 'SxGeo.php';
-        $SxGeo = new SxGeo(Mage::getBaseDir('var') . '/geoip/SxGeoCity.dat');
+        $SxGeo = new GeoIP_SxGeo(Mage::getBaseDir('var') . DS . 'geoip' . DS . 'SxGeoCity.dat');
         $city_full = $SxGeo->getCity($ip);
         unset($SxGeo);
         if ($city_full['city']['name_ru'] != '') {
             return $city_full['city']['name_ru'];
-        } else {
-            return Mage::getStoreConfig('geoip/general/city');
         }
+        return Mage::getStoreConfig('geoip/general/city');
     }
 
     public function getCity()
     {
+        if (!$this->city) {
+            $this->city = $this->getCityByIp(Mage::helper('core/http')->getRemoteAddr());
+        }
         return $this->city;
     }
 }

@@ -16,6 +16,13 @@ class Mygento_Geoip_Block_System_Config_Status extends Mage_Adminhtml_Block_Syst
         return parent::render($element);
     }
 
+    /**
+     *
+     * @param Varien_Data_Form_Element_Abstract $element
+     * @return string
+     *
+     * @SuppressWarnings("unused")
+     */
     protected function _getElementHtml(Varien_Data_Form_Element_Abstract $element)
     {
         $info = Mage::getModel('geoip/info');

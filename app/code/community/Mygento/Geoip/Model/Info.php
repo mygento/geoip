@@ -12,6 +12,7 @@ class Mygento_Geoip_Model_Info extends Mygento_Geoip_Model_Abstract
 
     public function getDatFileDownloadDate()
     {
-        return file_exists($this->local_file) ? filemtime($this->local_file) : 0;
+        $io = new Varien_Io_File();
+        return $io->fileExists($this->local_file, true) ? filemtime($this->local_file) : 0;
     }
 }

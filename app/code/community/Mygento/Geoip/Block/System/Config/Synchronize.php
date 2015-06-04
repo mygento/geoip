@@ -22,6 +22,14 @@ class Mygento_Geoip_Block_System_Config_Synchronize extends Mage_Adminhtml_Block
         return parent::render($element);
     }
 
+    /**
+     *
+     * @param Varien_Data_Form_Element_Abstract $element
+     * @return string
+     *
+     * @SuppressWarnings("unused")
+     */
+
     protected function _getElementHtml(Varien_Data_Form_Element_Abstract $element)
     {
         return $this->_toHtml();

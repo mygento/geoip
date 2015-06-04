@@ -25,7 +25,7 @@ class Mygento_Geoip_Helper_Data extends Mage_Core_Helper_Abstract
     {
         $zip = new ZipArchive;
         if ($zip->open($archive) === true) {
-            $zip->extractTo(Mage::getBaseDir('var') . DS . 'geoip' . DS);
+            $zip->extractTo($destination . DS);
             $zip->close();
             return true;
         }
