@@ -11,7 +11,7 @@
     </tabs>
     <sections>
         <geoip module="geoip" translate="label">
-            <label>GeoIP</label>
+            <label>Geo IP</label>
             <tab>allmygento</tab>
             <sort_order>90</sort_order>
             <show_in_default>1</show_in_default>
@@ -43,6 +43,15 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </enabled>
+                        <layout>
+                            <label>Add via Layout</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </layout>
                         <geoip_status translate="label">
                             <label>Sypex Geo City Database Downloaded</label>
                             <frontend_type>label</frontend_type>
@@ -68,7 +77,17 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
+                            <comment>City name</comment>
                         </city>
+                        <country translate="label">
+                            <label>Default Country</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Country code</comment>
+                        </country>
                     </fields>
                 </general>
             </groups>

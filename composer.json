@@ -8,16 +8,16 @@
         "magento",
         "geoip"
     ],
-    "authors":[
+    "authors": [
         {
-            "name":"Mygento",
+            "name": "Mygento",
             "email": "connect@mygento.net",
             "homepage": "http://www.mygento.net/"
         }
     ],
     "require": {
         "magento-hackathon/magento-composer-installer": "*",
-        "mygento/base":"*"
+        "mygento/base": "*"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "2.*",
@@ -36,6 +36,7 @@
         }
     ],
     "extra": {
-        "magento-root-dir": "."
+        "magento-root-dir": ".",
+        "with-bootstrap-patch": false
     }
 }

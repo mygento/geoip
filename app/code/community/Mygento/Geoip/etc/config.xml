@@ -64,6 +64,13 @@
         </routers>
     </admin>
     <frontend>
+        <layout>
+            <updates>
+                <geoip>
+                    <file>mygento/geoip.xml</file>
+                </geoip>
+            </updates>
+        </layout>
         <translate>
             <modules>
                 <geoip>
@@ -87,7 +94,17 @@
         <geoip>
             <general>
                 <city>Москва</city>
+                <country>RU</country>
+                <enabled>0</enabled>
+                <layout>1</layout>
             </general>
         </geoip>
     </default>
+    <phpunit>
+        <suite>
+            <modules>
+                <Mygento_Geoip/>
+            </modules>
+        </suite>
+    </phpunit>
 </config>

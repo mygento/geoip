@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade to newer
+ * versions in the future.
+ *
+ * @category   Mygento
+ * @package    Mygento_Geoip
+ * @copyright  Copyright © 2015 NKS (http://www.mygento.ru)
+ */
+-->
+<layout version="0.1.0">
+    <default>
+        <reference name="header">
+            <block type="geoip/init" name="geoipinit" as="geoipinit"/>
+        </reference>
+    </default>
+</layout>

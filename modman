@@ -1,2 +1,5 @@
 app/code/community/Mygento/Geoip app/code/community/Mygento/Geoip
 app/etc/modules/Mygento_Geoip.xml app/etc/modules/Mygento_Geoip.xml
+app/design/frontend/base/default/layout/mygento/geoip.xml app/design/frontend/base/default/layout/mygento/geoip.xml
+app/design/adminhtml/default/default/template/mygento/geoip/system/config/synchronize.phtml app/design/adminhtml/default/default/template/mygento/geoip/system/config/synchronize.phtml
+lib/GeoIP/SxGeo.php lib/GeoIP/SxGeo.php
