@@ -5,12 +5,15 @@
  *
  * @category Mygento
  * @package Mygento_Geoip
- * @copyright Copyright © 2014 NKS LLC. (http://www.mygento.ru)
+ * @copyright Copyright © 2015 NKS LLC. (http://www.mygento.ru)
  */
 class Mygento_Geoip_Model_Abstract
 {
 
-    protected $local_dir, $local_file, $local_archive, $remote_archive;
+    protected $local_dir;
+    protected $local_file;
+    protected $local_archive;
+    protected $remote_archive;
 
     public function __construct()
     {
@@ -30,7 +33,7 @@ class Mygento_Geoip_Model_Abstract
         $helper = Mage::helper('geoip');
 
         $dir = Mage::getBaseDir('var') . '/' . $this->local_dir;
-        if (file_exists($dir)) {
+        if (is_dir($dir)) {
             if (!is_dir($dir)) {
                 return sprintf($helper->__('%s exists but it is file, not dir.'), 'var/' . $this->local_dir);
             } elseif ((!file_exists($this->local_file) || !file_exists($this->local_archive)) && !is_writable($dir)) {
@@ -82,7 +85,6 @@ class Mygento_Geoip_Model_Abstract
                 }
             }
         }
-
-        echo json_encode($ret);
+        return $ret;
     }
 }

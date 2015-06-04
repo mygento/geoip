@@ -12,17 +12,15 @@ class Mygento_Geoip_Adminhtml_GeoipController extends Mage_Adminhtml_Controller_
 
     public function statusAction()
     {
-        $_session = Mage::getSingleton('core/session');
-        $info = Mage::getModel('geoip/info');
-
-        $_realSize = filesize($info->getArchivePath());
-        $_totalSize = $_session->getData('_geoip_file_size');
-        echo $_totalSize ? $_realSize / $_totalSize * 100 : 0;
+        $_realSize = filesize(Mage::getModel('geoip/info')->getArchivePath());
+        $_totalSize = Mage::getSingleton('core/session')->getData('_geoip_file_size');
+        $result = $_totalSize ? $_realSize / $_totalSize * 100 : 0;
+        $this->getResponse()->setBody($result);
     }
 
     public function synchronizeAction()
     {
-        $info = Mage::getModel('geoip/info');
-        $info->update();
+        $result = Mage::getModel('geoip/info')->update();
+        $this->getResponse()->setBody(Mage::helper('core')->jsonEncode($result));
     }
 }

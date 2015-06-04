@@ -28,9 +28,8 @@ class Mygento_Geoip_Helper_Data extends Mage_Core_Helper_Abstract
             $zip->extractTo(Mage::getBaseDir('var') . DS . 'geoip' . DS);
             $zip->close();
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 
     public function init()
