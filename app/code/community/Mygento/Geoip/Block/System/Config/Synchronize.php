@@ -37,12 +37,12 @@ class Mygento_Geoip_Block_System_Config_Synchronize extends Mage_Adminhtml_Block
 
     public function getAjaxSyncUrl()
     {
-        return Mage::getSingleton('adminhtml/url')->getUrl('adminhtml/geoip/synchronize');
+        return Mage::getSingleton('adminhtml/url')->getUrl('geoip/adminhtml_geoip/synchronize');
     }
 
     public function getAjaxStatusUpdateUrl()
     {
-        return Mage::getSingleton('adminhtml/url')->getUrl('adminhtml/geoip/status');
+        return Mage::getSingleton('adminhtml/url')->getUrl('geoip/adminhtml_geoip/status');
     }
 
     public function getButtonHtml()

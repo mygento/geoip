@@ -54,13 +54,13 @@
     </adminhtml>
     <admin>
         <routers>
-            <adminhtml>
+            <geoip>
+                <use>admin</use>
                 <args>
-                    <modules>
-                        <mygento_geoip>Mygento_Geoip_Adminhtml</mygento_geoip>
-                    </modules>
+                    <module>Mygento_Geoip</module>
+                    <frontName>geoip</frontName>
                 </args>
-            </adminhtml>
+            </geoip>
         </routers>
     </admin>
     <frontend>
