@@ -23,7 +23,10 @@ class Mygento_Geoip_Model_Country extends Mygento_Geoip_Model_Abstract
 
     public function getCountryByIp($ip)
     {
-        $SxGeo = new GeoIP_SxGeo(Mage::getBaseDir('var') . DS . 'geoip' . DS . 'SxGeoCity.dat');
+        if (!$this->isFileExists()) {
+            return null;
+        }
+        $SxGeo = new GeoIP_SxGeo($this->local_file);
         $country = $SxGeo->getCountry($ip);
         if ($country) {
             return $country;

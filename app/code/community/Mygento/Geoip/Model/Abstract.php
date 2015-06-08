@@ -23,6 +23,12 @@ class Mygento_Geoip_Model_Abstract
         $this->remote_archive = 'http://sypexgeo.net/files/SxGeoCity_utf8.zip';
     }
 
+    public function isFileExists()
+    {
+        $io = new Varien_Io_File();
+        return $io->fileExists($this->local_file, true);
+    }
+
     public function getArchivePath()
     {
         return $this->local_archive;
@@ -31,10 +37,10 @@ class Mygento_Geoip_Model_Abstract
     public function checkFilePermissions()
     {
         $io = new Varien_Io_File();
+        $io->checkAndCreateFolder($this->local_dir);
         if (!$io->isWriteable($this->local_dir)) {
             return 'folder is not writable';
         }
-        $io->checkAndCreateFolder($this->local_dir);
         return '';
     }
 
