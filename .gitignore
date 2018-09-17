@@ -1,6 +1,10 @@
 .DS_Store
+/nbproject
+/magento.rb
 /magento.py
 /vendor/
+/node_modules
+composer.lock
 
 #unit testing
 /app/code/community/EcomDev/

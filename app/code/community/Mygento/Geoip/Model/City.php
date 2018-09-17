@@ -5,7 +5,7 @@
  *
  * @category Mygento
  * @package Mygento_Geoip
- * @copyright Copyright © 2014 NKS LLC. (http://www.mygento.ru)
+ * @copyright 2014 NKS LLC. (https://www.mygento.ru)
  */
 class Mygento_Geoip_Model_City extends Mygento_Geoip_Model_Abstract
 {
@@ -23,7 +23,7 @@ class Mygento_Geoip_Model_City extends Mygento_Geoip_Model_Abstract
 
     public function getCityByIp($ip)
     {
-        if(!$this->isFileExists()){
+        if (!$this->isFileExists()) {
             return null;
         }
         $SxGeo = new GeoIP_SxGeo($this->local_file);

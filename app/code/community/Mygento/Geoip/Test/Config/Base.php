@@ -89,7 +89,6 @@ class Mygento_Geoip_Test_Config_Base extends EcomDev_PHPUnit_Test_Case_Config
      */
     public function testEvent()
     {
-
     }
 
     /**

@@ -5,7 +5,7 @@
  *
  * @category Mygento
  * @package Mygento_Geoip
- * @copyright Copyright © 2014 NKS LLC. (http://www.mygento.ru)
+ * @copyright 2014 NKS LLC. (https://www.mygento.ru)
  */
 class Mygento_Geoip_Adminhtml_GeoipController extends Mage_Adminhtml_Controller_Action
 {
