@@ -9,8 +9,9 @@ parameters:
                 - "die("
                 - "var_dump("
                 - "exit;"
-        phplint:        
+        phplint:
         phpmd:
+            exclude: ['lib']
             ruleset: ['vendor/mygento/coding-standard/Mygento-Mage1/phpmd.xml']
         phpcs:
             warning_severity: null

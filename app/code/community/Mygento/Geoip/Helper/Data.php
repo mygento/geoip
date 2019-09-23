@@ -54,6 +54,10 @@ class Mygento_Geoip_Helper_Data extends Mage_Core_Helper_Abstract
 
     public function getCurrentCity()
     {
+        $value = Mage::getSingleton('core/session')->getGeoCity();
+        if (!$value) {
+            $this->init();
+        }
         return Mage::getSingleton('core/session')->getGeoCity();
     }
 }
